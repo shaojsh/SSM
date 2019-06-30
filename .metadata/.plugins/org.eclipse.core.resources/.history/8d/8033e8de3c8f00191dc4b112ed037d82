@@ -1,0 +1,11 @@
+package cn.itcom.mybatis.dao;
+/**
+* @author 作者  邵 
+* @version 创建时间：2019年6月15日 下午3:11:57
+* <p>
+* describe :  
+* </p>
+*/
+public class OrdersMapperCustomTest {
+
+}

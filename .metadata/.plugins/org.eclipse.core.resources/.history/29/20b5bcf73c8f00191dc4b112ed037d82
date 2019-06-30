@@ -1,0 +1,27 @@
+package cn.itcom.mybatis.dao;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+/**
+* @author 作者  邵 
+* @version 创建时间：2019年6月15日 下午3:12:20
+* <p>
+* describe :  
+* </p>
+*/
+public class OrdersMapperCustomTest {
+
+	@Before
+	public void setUp() throws Exception {
+		
+	}
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

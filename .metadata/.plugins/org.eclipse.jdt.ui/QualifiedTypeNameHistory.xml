@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="cn.itcom.mybatis.po.orders"/>
+<fullyQualifiedTypeName name="cn.itcom.mybatis.po.User"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="cn.itcast.ssm.po.User"/>
+<fullyQualifiedTypeName name="cn.itcast.ssm.mapper.UserMapper"/>
+</qualifiedTypeNameHistroy>

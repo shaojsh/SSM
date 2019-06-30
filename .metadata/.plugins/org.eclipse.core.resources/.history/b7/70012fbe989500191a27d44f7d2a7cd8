@@ -1,0 +1,33 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:jpa="http://www.springframework.org/schema/data/jpa" xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:tx="http://www.springframework.org/schema/tx" xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-5.1.8.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-5.1.8.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-5.1.8.xsd
+    http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-5.1.8.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-5.1.8.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-5.1.8.xsd">
+    <context:property-placeholder location = "classpath:db.properities"/>
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+      <property name="driverClassName" value = "${jdbc.driver}"></property>
+      <property name="url" value = "${jdbc.url}"></property>
+      <property name="username" value = "${jdbc.username}"></property>
+      <property name="password" value = "${jdbc.password}"></property>
+      <property name="maxActive" value = "10"></property>
+      <property name="maxIdle" value = "5"></property>
+    </bean>
+    <bean id = "SqlSessionFactory" class= "org.mybatis.spring.SqlSessionFactoryBean">
+      <property name="configLocation" value = "mybatis/sqlMapConfig.xml"></property>
+      <property name="dataSource" ref = "dataSource"></property>
+    </bean>
+    <bean id = "userDao" class = "cn.itcast.ssm.dao.userDaoImpl">
+       <property name="sqlSessionFactory" ref = "SqlSessionFactory"></property>
+    </bean>
+    <bean class = "org.mybatis.spring.mapper.MapperScannerConfigurer">
+    <property name="basePackage" value = "cn.itcast.ssm.mapper"></property>
+    <property name="sqlSessionFactoryBeanName" value="SqlSessionFactory"></property>
+    </bean>
+</beans>

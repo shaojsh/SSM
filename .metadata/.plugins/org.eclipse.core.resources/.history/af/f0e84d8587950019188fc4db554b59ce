@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间是为了分类化管理 在使用代理开发时有特殊重要的作用，namespace是mapper接口的地址 -->
+<mapper namespace = "cn.itcast.ssh.mapper.UserMapper" >
+
+<select id="findUserById" parameterType="int" resultType="user">
+    SELECT * FROM USER WHERE id = #{id}
+</select>
+</mapper>

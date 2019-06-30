@@ -1,0 +1,39 @@
+package cn.itcom.mybatis.dao;
+
+import static org.junit.Assert.*;
+
+import java.io.InputStream;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.Before;
+import org.junit.Test;
+
+/**
+* @author 作者  邵 
+* @version 创建时间：2019年6月15日 下午3:12:20
+* <p>
+* describe :  
+* </p>
+*/
+public class OrdersMapperCustomTest {
+
+	SqlSessionFactory sqlSessionFactory;
+	@Before
+	public void setUp() throws Exception {
+		// mybatis配置文件
+		String resource = "sqlMapConfig.xml";
+		InputStream inputStream = Resources.getResourceAsStream(resource);
+		// 创建会话工厂
+		// 通过工厂得到sqlsession
+		// 通过sqlsession操作数据库
+	    sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+	}
+
+	@Test
+	public void test11() {
+		fail("Not yet implemented");
+	}
+
+}

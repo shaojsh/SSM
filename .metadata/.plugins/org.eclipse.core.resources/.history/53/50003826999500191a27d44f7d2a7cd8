@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+     <!-- 别名定义 -->
+     <typeAliases>
+      <!--批量别名的定义 指定包名，mybatis会自定的扫描po类，class名即为默认的别名-->
+      <package name="cn.itcast.ssm.po"/>     
+     </typeAliases>
+     
+	<mappers>
+		<!-- 映射文件的位置  单个映射文件加载 -->
+		<mapper resource="sqlmap/user.xml" />
+	</mappers>
+
+</configuration>

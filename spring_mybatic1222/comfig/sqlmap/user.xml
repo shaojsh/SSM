@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间是为了分类化管理 -->
+<mapper namespace = "test">
+<!-- select 实际上是satement 对象中的id -->
+<!-- #{id} 接收输入的参数   resultType 输出的数据-->
+<select id="findUserById" parameterType="int" resultType="cn.itcast.ssm.po.User">
+    SELECT * FROM USER WHERE id = #{id}
+</select>
+</mapper>
